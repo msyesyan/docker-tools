@@ -1,10 +1,7 @@
 #!/bin/bash
 
-source ../env.sh
-source ../utils/utils.sh
-
-echo "env"
-echo $DOCKER_TOOLS_HOME
+source $DOCKER_TOOLS_HOME/env.sh
+source $DOCKER_TOOLS_HOME/utils/utils.sh
 
 PG_TOOLS_HOME=$DOCKER_TOOLS_HOME/postgresql
 
@@ -15,7 +12,7 @@ prepare() {
 
 run() {
     docker run \
-        --name $TOOLS_PG \
+        --name $SERVICE_PG \
         -p 5432:5432 \
         -v pgdata:/var/lib/postgresql/data \
         -v bk:/root/bk \

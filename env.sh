@@ -1,4 +1,7 @@
 #!/bin/bash
 
 DOCKER_TOOLS_HOME=$HOME/Workspace/docker-tools
-TOOLS_PG=tools_pg
+
+# service container names
+SERVICE_PG=service_pg
+SERVICE_REDIS=service_redis
