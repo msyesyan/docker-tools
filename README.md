@@ -1,4 +1,9 @@
-# Setup env
+## Clone Project into your home
+```
+git clone https://github.com/msyesyan/docker-tools ~/Workspace/docker-tools
+```
+
+## Setup env
 
 ```
 # open your ~/.zshrc or ~/.bashrc file, copy and paste next line
