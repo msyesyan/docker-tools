@@ -4,14 +4,11 @@ source $DOCKER_TOOLS_HOME/env.sh
 source $DOCKER_TOOLS_HOME/utils/utils.sh
 
 run() {
-    docker run \
-        --name $SERVICE_REDIS \
-        -p 6379:6379 \
-        -d redis
+    stop $SERVICE_MS $1
 }
 
 main() {
-    run
+    run $1
 }
 
-main
+main $1

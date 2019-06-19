@@ -13,9 +13,10 @@ prepare() {
 run() {
     docker run \
         --name $SERVICE_PG \
+        --restart=on-failure \
         -p 5432:5432 \
-        -v pgdata:/var/lib/postgresql/data \
-        -v bk:/root/bk \
+        -v ${PG_TOOLS_HOME}/pgdata:/var/lib/postgresql/data \
+        -v ${PG_TOOLS_HOME}/bk:/root/bk \
         -d postgres
 }
 

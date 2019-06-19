@@ -1,2 +1,4 @@
 postgresql/bk
 postgresql/pgdata
+mysql/data
+mysql/bk
